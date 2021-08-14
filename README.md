@@ -45,11 +45,13 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 #### WSL
 
+1. Clone this repo.
 1. **COPY** `.gitconfig` and uncomment relevant credential manager line.
 1. Symlink all other appropriate files and directories from this repo.
 
 #### macOS
 
+1. Clone this repo.
 1. Symlink all appropriate files and directories from this repo.
 
 ### Windows
