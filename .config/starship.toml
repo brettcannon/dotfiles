@@ -1,0 +1,9 @@
+[battery]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[python]
+python_binary = ["py"]
+detect_folders = [".venv"]
