@@ -1,0 +1,15 @@
+tap "homebrew/core"
+
+# Tools
+brew "ffmpeg"
+brew "youtube-dl"
+
+# Fonts
+tap "homebrew/cask-fonts"
+cask "font-caskaydia-cove-nerd-font"
+cask "font-fira-code"
+
+# Apps
+tap "homebrew/cask"
+cask "handbrake"
+cask "notion"
