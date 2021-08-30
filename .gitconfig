@@ -1,20 +1,23 @@
 [core]
-    # Path to global gitignore file.
     excludesfile = ~/.gitignore
-[user]
-    name = "Brett Cannon"
-    email = "brett@python.org"
-    signkey = 966894F34B4EABA8
+[init]
+   defaultBranch = main
 [remote]
     pushdefault = origin
 [push]
     default = current
 [pull]
-	rebase = false
+    rebase = false
 [gpg]
-	program = gpg
+    program = gpg
 
 #[credential]
     # Can use under WSL to rely on the Windows credential manager.
     #helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
 
+[user]
+    name = "Brett Cannon"
+    email = "brett@python.org"
+    signkey = 966894F34B4EABA8
+[includeIf "gitdir/i:microsoft/"]
+    path = .gitconfig.work
