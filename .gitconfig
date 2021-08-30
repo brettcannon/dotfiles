@@ -1,5 +1,5 @@
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = .git_/.gitignore
 [init]
    defaultBranch = main
 [remote]
@@ -20,4 +20,4 @@
     email = "brett@python.org"
     signkey = 966894F34B4EABA8
 [includeIf "gitdir/i:microsoft/"]
-    path = .gitconfig.work
+    path = .git_/work.gitconfig
