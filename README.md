@@ -25,7 +25,7 @@ Linux/Codespaces default; configured as backup for when fish or zsh aren't used.
 
 ### [Git](https://git-scm.com/)
 
-Both `.gitconfig` and `.gitignore`.
+Both `.gitconfig` and `.git_`.
 
 
 ### [Vim](https://www.vim.org/)
