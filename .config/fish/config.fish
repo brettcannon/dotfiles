@@ -1,4 +1,7 @@
 # For any settings that are machine-specific, use universal variables.
+# `set`: http://fishshell.com/docs/current/cmds/set.html?highlight=set
+# `fish_add_path`: http://fishshell.com/docs/current/cmds/fish_add_path.html
+
 set -g -x CLICOLOR 1
 set -g -x CC clang
 set -g -x CXX clang++
