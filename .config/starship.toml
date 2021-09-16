@@ -4,6 +4,12 @@ disabled = true
 [cmd_duration]
 disabled = true
 
+[dotnet]
+disabled = true
+
+[package]
+disabled = true
+
 [python]
 python_binary = ["py"]
 detect_folders = [".venv"]
