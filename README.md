@@ -4,6 +4,8 @@ These files are structured for [configuring Codespaces](https://docs.github.com/
 
 ## Supported tools
 
+VS Code is left out thanks to [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync).
+
 ### Shells
 
 #### [fish](https://fishshell.com/)
