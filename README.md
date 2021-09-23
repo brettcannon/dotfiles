@@ -49,8 +49,9 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 1. Clone this repo.
 1. Install [Homebrew](https://brew.sh/).
 1. `brew bundle install`
-1. **COPY** `.gitconfig` and uncomment relevant credential manager line.
 1. Symlink all other appropriate files and directories from this repo.
+1. **COPY** `.git_/original.local.gitconfig` to `.git_/local.gitconfig` and
+   uncomment relevant credential manager lines.
 
 
 #### macOS

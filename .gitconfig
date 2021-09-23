@@ -11,9 +11,12 @@
 [gpg]
     program = gpg
 
-#[credential]
-    # Can use under WSL to rely on the Windows credential manager.
-    #helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    deleted = red strike
+    untracked = cyan
+    branch = yellow black bold ul
 
 [user]
     name = "Brett Cannon"
@@ -21,3 +24,6 @@
     signkey = 966894F34B4EABA8
 [includeIf "gitdir/i:microsoft/"]
     path = .git_/work.gitconfig
+
+[include]
+    path = .git_/local.config
