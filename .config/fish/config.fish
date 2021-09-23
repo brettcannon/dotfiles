@@ -19,3 +19,21 @@ else
 end
 
 starship init fish | source
+zoxide init fish | source
+
+function tool_mapping -d "Print what an old command should be replaced with"
+  set_color red
+  echo -n $argv[1]
+  set_color normal
+  echo -n " → "
+  set_color green
+  echo $argv[2]
+  set_color normal
+end
+
+function fish_greeting
+  tool_mapping ls exa
+  tool_mapping top btm
+  tool_mapping du dust
+  tool_mapping cd "z / zi"
+end
