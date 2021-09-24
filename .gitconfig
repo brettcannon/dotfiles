@@ -26,4 +26,4 @@
     path = .git_/work.gitconfig
 
 [include]
-    path = .git_/local.config
+    path = .git_/local.gitconfig
