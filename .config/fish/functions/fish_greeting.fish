@@ -3,7 +3,7 @@ function tool_mapping -d "Print what an old command should be replaced with"
   echo -n $argv[1]
   set_color normal
   echo -n " → "
-  if command --query $argv[2]
+  if command --search $argv[2] > /dev/null
     set_color green
     echo $argv[2]
   else
