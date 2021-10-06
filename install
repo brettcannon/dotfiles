@@ -21,7 +21,7 @@ def symlink(source: pathlib.Path, target_dir: pathlib.Path):
     link = target_dir / source.name
     if link.exists():
         if link.is_symlink():
-            resolved_link = link.readlink()
+            resolved_link = link.resolve()
             if resolved_link == source:
                 return
             else:
