@@ -25,7 +25,12 @@ def symlink(source: pathlib.Path, target_dir: pathlib.Path):
             resolved_link = link.resolve()
             if resolved_link == source:
                 return
-        print(f"Overwriting {link}", file=sys.stderr)
+
+        print(f"Deleting {link}")
+        if link.is_dir():
+            shutil.rmtree(link)
+        else:
+            link.unlink()
 
     link.symlink_to(source, target_is_directory=source.is_dir())
 
