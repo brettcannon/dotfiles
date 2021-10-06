@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 import pathlib
 import shutil
+import sys
 
 
 def wsl_gitconfig():
@@ -24,12 +25,9 @@ def symlink(source: pathlib.Path, target_dir: pathlib.Path):
             resolved_link = link.resolve()
             if resolved_link == source:
                 return
-            else:
-                raise ValueError(f"{link} exists and links to {resolved_link}")
-        else:
-            raise ValueError(f"{link} exists")
-    else:
-        link.symlink_to(source, target_is_directory=source.is_dir())
+        print(f"Overwriting {link}", file=sys.stderr)
+
+    link.symlink_to(source, target_is_directory=source.is_dir())
 
 
 def main(target):
