@@ -47,21 +47,23 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 #### WSL
 
 1. Install [Homebrew](https://brew.sh/).
-1. `brew bundle install`.
+1. `brew bundle install`
 1. Install Python.
 1. Clone this repo and run `install`.
 
+
 #### macOS
 
+1. Install [1password](https://1password.com/)
+1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
+1. Install [Mozilla VPN](https://www.mozilla.org/)
+1. Install [Signal](https://signal.org/)
+1. Install [MonoLisa](https://www.monolisa.dev/orders)
 1. Install [Homebrew](https://brew.sh/).
 1. `brew bundle install`
 1. `brew bundle install --file Brewfile.macos`
 1. Install Python.
 1. Clone this repo and run `install`.
-1. Install [1password](https://1password.com/)
-1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
-1. Install [Mozilla VPN](https://www.mozilla.org/)
-1. Install [Signal](https://signal.org/)
 
 
 ### Windows
@@ -70,3 +72,4 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
 1. Install [Mozilla VPN](https://www.mozilla.org/)
 1. Install [Signal](https://signal.org/)
+1. Install [MonoLisa](https://www.monolisa.dev/orders)
