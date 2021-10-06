@@ -1,0 +1,63 @@
+#! /usr/bin/env python3
+import pathlib
+import shutil
+
+
+def wsl_gitconfig():
+    """Copy over the WSL gitconfig to be the local gitconfig."""
+    proc_version = pathlib.Path("/proc/version")
+    if proc_version.exists() and "Microsoft" in proc_version.read_text():
+        original = pathlib.Path(".git_/wsl.gitconfig")
+        local = original.with_name("local.gitconfig")
+        shutil.copyfile(original, local)
+
+
+def symlink(source: pathlib.Path, target_dir: pathlib.Path):
+    """Symlink the source into the target directory.
+
+    It is a no-op if the correct symlink already exists.
+
+    """
+    link = target_dir / source.name
+    if link.exists():
+        if link.is_symlink():
+            resolved_link = link.readlink()
+            if resolved_link == source:
+                return
+            else:
+                raise ValueError(f"{link} exists and links to {resolved_link}")
+        else:
+            raise ValueError(f"{link} exists")
+    else:
+        link.symlink_to(source, target_is_directory=source.is_dir())
+
+
+def main(target):
+    cwd = pathlib.Path.cwd()
+    for entry in cwd.iterdir():
+        name = entry.name
+        if not name.startswith("."):
+            continue
+        if name == ".config":
+            config_target = target / ".config"
+            if not config_target.exists():
+                config_target.mkdir()
+            for config_entry in entry.iterdir():
+                symlink(config_entry, config_target)
+        else:
+            symlink(entry, target)
+
+    wsl_gitconfig()
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 2:
+        raise ValueError("too many arguments")
+    elif len(sys.argv) == 2:
+        target = pathlib.Path(sys.argv[1])
+    else:
+        target = pathlib.Path.home()
+
+    main(target)
