@@ -19,7 +19,7 @@ function fish_greeting
   tool_mapping cd zoxide
   tool_mapping ls exa
   tool_mapping cat bat
-  tool_mapping top btm
+  tool_mapping top htop
   tool_mapping du dust
   tool_mapping vim nvim
 end
