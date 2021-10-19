@@ -7,6 +7,7 @@ set -g -x CC clang
 set -g -x CXX clang++
 set -g -x CFLAGS "-Wno-unused-value -Wno-empty-body -Qunused-arguments -Wno-deprecated-declarations"
 set -x GPG_TTY (tty)
+set -g -x PIP_REQUIRE_VIRTUALENV 1
 
 if command --query code-insiders
   set -g -x EDITOR code-insiders
