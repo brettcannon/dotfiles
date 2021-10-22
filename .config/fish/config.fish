@@ -8,6 +8,7 @@ set -g -x CXX clang++
 set -g -x CFLAGS "-Wno-unused-value -Wno-empty-body -Qunused-arguments -Wno-deprecated-declarations"
 set -x GPG_TTY (tty)
 set -g -x PIP_REQUIRE_VIRTUALENV 1
+set -g -x MAKEFLAGS (python3 -c "import multiprocessing; print(f'-j{multiprocessing.cpu_count()}')")
 
 if command --query nvim
   set -g -x EDITOR nvim
