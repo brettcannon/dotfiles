@@ -9,11 +9,7 @@ set -g -x CFLAGS "-Wno-unused-value -Wno-empty-body -Qunused-arguments -Wno-depr
 set -x GPG_TTY (tty)
 set -g -x PIP_REQUIRE_VIRTUALENV 1
 
-if command --query code-insiders
-  set -g -x EDITOR code-insiders
-else if command --query code
-  set -g -x EDITOR code
-else if command --query nvim
+if command --query nvim
   set -g -x EDITOR nvim
 else
   set -g -x EDITOR vim
