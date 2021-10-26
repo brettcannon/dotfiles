@@ -54,7 +54,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 #### macOS
 
-1. Install [1password](https://1password.com/)
+1. Install [1Password](https://1password.com/)
 1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
 1. Install [Mozilla VPN](https://www.mozilla.org/)
 1. Install [Signal](https://signal.org/)
@@ -68,7 +68,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 ### Windows
 
-1. Install [1password](https://1password.com/)
+1. Install [1Password](https://1password.com/)
 1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
 1. Install [Mozilla VPN](https://www.mozilla.org/)
 1. Install [Signal](https://signal.org/)
