@@ -73,3 +73,4 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 1. Install [Mozilla VPN](https://www.mozilla.org/)
 1. Install [Signal](https://signal.org/)
 1. Install [MonoLisa](https://www.monolisa.dev/orders)
+1. `winget import --import-file winget.json`
