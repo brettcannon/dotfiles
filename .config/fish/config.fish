@@ -10,16 +10,16 @@ set -x GPG_TTY (tty)
 set -g -x PIP_REQUIRE_VIRTUALENV 1
 set -g -x MAKEFLAGS (python3 -c "import multiprocessing; print(f'-j{multiprocessing.cpu_count()}')")
 
-if command --query nvim
+if command --search nvim > /dev/null
   set -g -x EDITOR nvim
 else
   set -g -x EDITOR vim
 end
 
-if command --query starship
+if command --search starship > /dev/null
   starship init fish | source
 end
 
-if command --query zoxide
+if command --search zoxide > /dev/null
   zoxide init fish | source
 end

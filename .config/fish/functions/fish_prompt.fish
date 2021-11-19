@@ -1,4 +1,4 @@
-if not command --query starship
+if not command --search starship > /dev/null
     function fish_prompt
         set -g __fish_git_prompt_showcolorhints 'yes'
         set -g __fish_git_prompt_color_branch yellow
