@@ -56,7 +56,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 1. Install [1Password](https://1password.com/)
 1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
-1. Install [Mozilla VPN](https://www.mozilla.org/)
+1. Install [Mullvad](https://mullvad.net/)
 1. Install [Signal](https://signal.org/)
 1. Install [MonoLisa](https://www.monolisa.dev/orders)
 1. Install [Homebrew](https://brew.sh/).
@@ -70,7 +70,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 1. Install [1Password](https://1password.com/)
 1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
-1. Install [Mozilla VPN](https://www.mozilla.org/)
+1. Install [Mullvad](https://mullvad.net/)
 1. Install [Signal](https://signal.org/)
 1. Install [MonoLisa](https://www.monolisa.dev/orders)
 1. `winget import --import-file winget.json`
