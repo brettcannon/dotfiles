@@ -11,8 +11,15 @@ set -g -x PIP_REQUIRE_VIRTUALENV 1
 set -g -x PIP_RESPECT_VIRTUALENV 1
 set -g -x MAKEFLAGS (python3 -c "import multiprocessing; print(f'-j{multiprocessing.cpu_count()}')")
 
+# Must come before anything relying on `PATH`.
+if test -e /home/linuxbrew/.linuxbrew/bin/brew
+  /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+end
+
+
 if command --search nvim > /dev/null
   set -g -x EDITOR nvim
+  alias vim=nvim
 else
   set -g -x EDITOR vim
 end
