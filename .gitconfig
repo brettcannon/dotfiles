@@ -1,5 +1,5 @@
 [core]
-    excludesfile = .git_/.gitignore
+    excludesfile = .git_/gitignore
 [init]
    defaultBranch = main
 [remote]
