@@ -8,6 +8,7 @@ brew "youtube-dl"
 tap "homebrew/cask-fonts"
 cask "font-caskaydia-cove-nerd-font"
 cask "font-fira-code"
+cask "font-victor-mono"
 
 # Apps
 tap "homebrew/cask"
