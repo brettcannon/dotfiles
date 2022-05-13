@@ -10,6 +10,7 @@ def wsl_gitconfig():
     if proc_version.exists() and "Microsoft" in proc_version.read_text():
         original = pathlib.Path(".git_/wsl.gitconfig")
         local = original.with_name("local.gitconfig")
+        print(f"Copying {original} to {local}")
         shutil.copyfile(original, local)
 
 
@@ -32,6 +33,7 @@ def symlink(source: pathlib.Path, target_dir: pathlib.Path):
         else:
             link.unlink()
 
+    print(f"Symlinking {source} to {link}")
     link.symlink_to(source, target_is_directory=source.is_dir())
 
 
@@ -39,11 +41,14 @@ def main(target):
     cwd = pathlib.Path.cwd()
     for entry in cwd.iterdir():
         name = entry.name
-        if not name.startswith("."):
+        if not name.startswith("."):  # File is for bootstrapping.
             continue
-        if name == ".config":
+        elif name in {".git", ".gitignore"}:  # For the repo only.
+            continue
+        elif name == ".config":
             config_target = target / ".config"
             if not config_target.exists():
+                print(f"Creating {config_target}")
                 config_target.mkdir()
             for config_entry in entry.iterdir():
                 symlink(config_entry, config_target)
