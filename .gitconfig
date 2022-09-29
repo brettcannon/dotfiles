@@ -1,13 +1,18 @@
 [core]
     excludesfile = .git_/gitignore
+
 [init]
    defaultBranch = main
+
 [remote]
     pushdefault = origin
+
 [push]
     default = current
+
 [pull]
     rebase = false
+
 [gpg]
     program = gpg
 
@@ -22,8 +27,17 @@
     name = "Brett Cannon"
     email = "brett@python.org"
     signkey = 966894F34B4EABA8
-[includeIf "gitdir/i:microsoft/"]
-    path = .git_/work.gitconfig
 
 [include]
     path = .git_/local.gitconfig
+[includeIf "gitdir/i:microsoft/"]
+    path = .git_/work.gitconfig
+
+
+[merge]
+	tool = code
+[mergetool]
+	writeToTemp = true
+	keepBackup = false
+[mergetool "code"]
+	cmd = code --wait -m $REMOTE $LOCAL $BASE $MERGED
