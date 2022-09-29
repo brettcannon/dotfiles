@@ -16,8 +16,11 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
   /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 end
 
-
-if command --search nvim > /dev/null
+if command --search code-insiders > /dev/null
+  set -g -x EDITOR "code-insiders --wait"
+else if command --search code > /dev/null
+  set -g -x EDITOR "code --wait"
+else if command --search nvim > /dev/null
   set -g -x EDITOR nvim
   alias vim=nvim
 else
