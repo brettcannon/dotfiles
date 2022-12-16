@@ -18,6 +18,7 @@ end
 function fish_greeting
   tool_mapping cd zoxide
   tool_mapping ls exa
+  tool_mapping rm rip
   tool_mapping cat bat
   tool_mapping du dust
 end
