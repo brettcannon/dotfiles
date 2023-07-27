@@ -7,37 +7,19 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "Discord.Discord"
+					"PackageIdentifier" : "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "Git.Git"
+					"PackageIdentifier" : "GitHub.GitLFS"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
-					"PackageIdentifier" : "Mozilla.Firefox"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode.Insiders"
-				},
-				{
 					"PackageIdentifier" : "GitHub.cli"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier" : "Python.Python.3"
-				},
-				{
-					"PackageIdentifier" : "SlackTechnologies.Slack"
-				},
-				{
-					"PackageIdentifier" : "9NBLGGH5R558"
 				}
 			],
 			"SourceDetails" : 
