@@ -28,12 +28,6 @@
     email = "brett@python.org"
     signkey = 966894F34B4EABA8
 
-[include]
-    path = .git_/local.gitconfig
-[includeIf "gitdir/i:microsoft/"]
-    path = .git_/work.gitconfig
-
-
 [merge]
 	tool = code
 [mergetool]
@@ -41,3 +35,10 @@
 	keepBackup = false
 [mergetool "code"]
 	cmd = code --wait -m $REMOTE $LOCAL $BASE $MERGED
+
+[includeIf "gitdir/i:microsoft/"]
+    path = .git_/work.gitconfig
+[include]
+    path = .git_/local.gitconfig
+
+
