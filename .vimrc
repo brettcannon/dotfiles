@@ -12,10 +12,6 @@ set fileencoding=utf-8
 " Reload files when edited on the disk
 set autoread
 
-" Specify a colour scheme
-" colour files found in <runtimepath>/colors/ or ~/.vim/colors/ .
-colorscheme desert
-
 " backspacing over autoindent, over linebreaks, and over the start of insert
 set backspace=indent,eol,start
 
