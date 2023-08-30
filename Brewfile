@@ -1,4 +1,4 @@
-# brew bundle --file Brewfile
+# See README.md for instructions.
 
 # Python
 brew "python"

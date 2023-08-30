@@ -44,33 +44,24 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 ### Unix
 
-#### WSL
-
 1. Install [Homebrew](https://brew.sh/).
-1. `brew bundle install`
-1. Install Python.
+1. `brew bundle --file Brewfile --no-lock install`
 1. Clone this repo and run `install`.
+1. Make fish the default login shell.
 
 
 #### macOS
 
 1. Install [1Password](https://1password.com/)
-1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
 1. Install [Mullvad](https://mullvad.net/)
 1. Install [Signal](https://signal.org/)
 1. Install [MonoLisa](https://www.monolisa.dev/orders)
-1. Install [Homebrew](https://brew.sh/).
-1. `brew bundle install`
 1. `brew bundle install --file Brewfile.macos`
-1. Install Python.
-1. Clone this repo and run `install`.
 
 
 ### Windows
 
 1. Install [1Password](https://1password.com/)
-1. Install [Firefox](https://www.mozilla.org/en-CA/firefox/new/)
 1. Install [Mullvad](https://mullvad.net/)
 1. Install [Signal](https://signal.org/)
 1. Install [MonoLisa](https://www.monolisa.dev/orders)
-1. `winget import --import-file winget.json`
