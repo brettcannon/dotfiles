@@ -6,8 +6,7 @@ import sys
 
 def wsl_gitconfig():
     """Copy over the WSL gitconfig to be the local gitconfig."""
-    proc_version = pathlib.Path("/proc/version")
-    if proc_version.exists() and "Microsoft" in proc_version.read_text():
+    if pathlib.Path("/mnt/c").exists():
         original = pathlib.Path(".git_/wsl.gitconfig")
         local = original.with_name("local.gitconfig")
         print(f"Copying {original} to {local}")
