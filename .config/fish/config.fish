@@ -15,6 +15,7 @@ set -g -x CDPATH ~/Repositories
 
 # Must come before anything relying on `PATH`.
 if test -e /home/linuxbrew/.linuxbrew/bin/brew
+  set -g -x HOMEBREW_NO_ENV_HINTS 1
   /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 end
 
