@@ -34,3 +34,17 @@ end
 if command --search zoxide > /dev/null
   zoxide init fish | source
 end
+
+if string match -q "$TERM_PROGRAM" "vscode"
+  if command --search code-insiders > /dev/null
+    set -x CODE_ACTIVATION (code-insiders --locate-shell-integration-path fish)
+  else if command --search code > /dev/null
+    set -x CODE_ACTIVATION (code --locate-shell-integration-path fish)
+  end
+
+  if set -q CODE_ACTIVATION
+    source $CODE_ACTIVATION
+  else
+    echo "Unable to find VS Code shell integration."
+  end
+end
