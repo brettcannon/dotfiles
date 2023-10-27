@@ -8,11 +8,14 @@ function update-os --description "Update the OS"
             # zypper info -t pattern devel_basis
             sudo zypper --non-interactive dist-upgrade
         else if grep --quiet debian /etc/os-release
+            # apt-get build-dep python3
+            # apt-get install build-essential
             # Covers Ubuntu as well thanks to `ID_LIKE=debian`.
             apt update -y
             sudo apt upgrade -y
             sudo apt autoremove -y
         else
+            # dnf builddep python3
             echo "Unsupported Linux distro"
             return 1
         end
