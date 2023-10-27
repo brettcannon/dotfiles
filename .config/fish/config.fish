@@ -19,6 +19,10 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
   /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 end
 
+if test -e ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+  set -g -x SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+end
+
 if command --search code-insiders > /dev/null
   set -g -x EDITOR "code-insiders --wait"
 else if command --search code > /dev/null
