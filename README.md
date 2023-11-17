@@ -47,7 +47,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 1. Install [Homebrew](https://brew.sh/).
 1. `brew bundle --file Brewfile --no-lock install`
 1. Clone this repo and run `install`.
-1. Make fish the default login shell.
+1. Make [fish the default login shell](https://fishshell.com/docs/current/#default-shell).
 
 
 #### macOS
