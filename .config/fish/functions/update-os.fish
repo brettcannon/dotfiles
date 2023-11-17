@@ -5,15 +5,13 @@ function update-os --description "Update the OS"
             echo "No support OpenSUSE LEAP (yet)"
             return 1
         else if grep --quiet tumbleweed /etc/os-release
-            # zypper info -t pattern devel_basis
+            # Python dependencies: zypper info -t pattern devel_basis
             sudo zypper --non-interactive dist-upgrade
+        # Covers Ubuntu as well thanks to `ID_LIKE=debian`.
         else if grep --quiet debian /etc/os-release
-            # apt-get build-dep python3
-            # apt-get install build-essential
-            # Covers Ubuntu as well thanks to `ID_LIKE=debian`.
-            apt update -y
-            sudo apt upgrade -y
-            sudo apt autoremove -y
+            # https://devguide.python.org/getting-started/setup-building/#install-dependencies
+            # https://wiki.debian.org/InstallingDebianOn/Microsoft/Windows/SubsystemForLinux
+            sudo apt update && sudo apt full-upgrade
         else
             # dnf builddep python3
             echo "Unsupported Linux distro"
