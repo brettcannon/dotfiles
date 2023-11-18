@@ -3,6 +3,10 @@ command_timeout = 750
 [battery]
 disabled = true
 
+[c]
+commands = [["$CC", "--version"], ["clang", "--version"], ["gcc", "--version"]]
+format = 'via [$symbol($name( $version)) ]($style)'
+
 [cmd_duration]
 disabled = true
 
