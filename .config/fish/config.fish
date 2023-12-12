@@ -19,7 +19,9 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
   /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 end
 
-if test -e ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+if test -e ~/.1password/agent.sock
+  set -g -x SSH_AUTH_SOCK ~/.1password/agent.sock
+else if test -e ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
   set -g -x SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 end
 
