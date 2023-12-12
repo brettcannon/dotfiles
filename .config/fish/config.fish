@@ -25,6 +25,10 @@ else if test -e ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.soc
   set -g -x SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 end
 
+if command --search nvim
+  alias vim nvim
+end
+
 if command --search code-insiders > /dev/null
   set -g -x EDITOR "code-insiders --wait"
 else if command --search code > /dev/null
@@ -35,10 +39,6 @@ end
 
 if command --search starship > /dev/null
   starship init fish | source
-end
-
-if command --search zoxide > /dev/null
-  zoxide init fish | source
 end
 
 if string match -q "$TERM_PROGRAM" "vscode"
