@@ -12,8 +12,10 @@ function update-os --description "Update the OS"
             # https://devguide.python.org/getting-started/setup-building/#install-dependencies
             # https://wiki.debian.org/InstallingDebianOn/Microsoft/Windows/SubsystemForLinux
             sudo apt update && sudo apt full-upgrade --yes
-        else
+	else if grep --quiet Fedora /etc/os-release
             # dnf builddep python3
+	    sudo dnf upgrade -y --quiet --refresh
+        else
             echo "Unsupported Linux distro"
             return 1
         end
