@@ -25,8 +25,14 @@ else if test -e ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.soc
   set -g -x SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 end
 
-if command --search nvim
+if command --search nvim > /dev/null
   alias vim nvim
+  echo "vim → nvim"
+end
+
+if command --search lsd > /dev/null
+  alias ls lsd
+  echo "ls → lsd"
 end
 
 if command --search code-insiders > /dev/null
