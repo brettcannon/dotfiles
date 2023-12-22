@@ -40,7 +40,7 @@ if command --search code-insiders > /dev/null
 else if command --search code > /dev/null
   set -g -x EDITOR "code --wait"
 else
-  set -g -x EDITOR vim
+  set -g -x EDITOR nano
 end
 
 if command --search starship > /dev/null
