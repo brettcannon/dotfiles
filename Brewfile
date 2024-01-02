@@ -9,8 +9,6 @@ brew "pipx"
 brew "starship"
 brew "fish"
 brew "ripgrep"
-brew "rm-improved"
-brew "dust"
 brew "bat"
 brew "zoxide"
 
