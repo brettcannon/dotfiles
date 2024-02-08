@@ -42,26 +42,17 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 
 ## Bootstrapping a new machine
 
-### Unix
-
-1. Install [Homebrew](https://brew.sh/).
-1. `brew bundle --file Brewfile --no-lock install`
-1. Clone this repo and run `install`.
-1. Make [fish the default login shell](https://fishshell.com/docs/current/#default-shell).
-
-
-#### macOS
-
-1. Install [1Password](https://1password.com/)
-1. Install [Mullvad](https://mullvad.net/)
-1. Install [Signal](https://signal.org/)
-1. Install [MonoLisa](https://www.monolisa.dev/orders)
-1. `brew bundle install --file Brewfile.macos`
-
-
-### Windows
-
-1. Install [1Password](https://1password.com/)
-1. Install [Mullvad](https://mullvad.net/)
-1. Install [Signal](https://signal.org/)
-1. Install [MonoLisa](https://www.monolisa.dev/orders)
+1. Clone this repo and run `install`
+   1. Install Python
+   1. Install Git
+1. Install [Homebrew](https://brew.sh/) (Unix and macOS)
+1. Set up Fish
+   1. [Install](https://fishshell.com/)
+   1. Make [fish the default login shell](https://fishshell.com/docs/current/#default-shell)
+1. Set up [NextDNS](https://my.nextdns.io/)
+1. Install apps
+   1. [1Password](https://1password.com/)
+   1. [Signal](https://signal.org/)
+1. Install fonts
+   1. [MonoLisa](https://www.monolisa.dev/orders)
+   2. [Symbols](https://www.nerdfonts.com/font-downloads)

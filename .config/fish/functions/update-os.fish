@@ -14,7 +14,7 @@ function update-os --description "Update the OS"
             sudo apt update && sudo apt full-upgrade --yes
 	else if grep --quiet Fedora /etc/os-release
             # dnf builddep python3
-	    sudo dnf upgrade -y --quiet --refresh
+	    sudo dnf upgrade -y --refresh
         else
             echo "Unsupported Linux distro"
             return 1
