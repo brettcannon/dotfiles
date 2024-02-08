@@ -24,6 +24,8 @@ function update-os --description "Update the OS"
         return 1
     end
 
+
+    echo
     echo "Homebrew ..."
     brew update
     brew upgrade
