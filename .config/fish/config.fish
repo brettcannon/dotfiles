@@ -5,11 +5,13 @@
 set -g -x CLICOLOR 1
 set -g -x CC clang
 set -g -x CXX clang++
-set -g -x CFLAGS "-Wno-unused-value -Wno-empty-body -Qunused-arguments -Wno-deprecated-declarations"
+# https://devguide.python.org/getting-started/setup-building/#clang
+set -g -x CFLAGS "-Wno-unused-value -Wno-empty-body -Qunused-arguments -Wno-parentheses-equality"
 set -x GPG_TTY (tty)
 set -g -x PIP_REQUIRE_VIRTUALENV 1
 set -g -x PIP_RESPECT_VIRTUALENV 1
-set -g -x MAKEFLAGS (python3 -c "import multiprocessing; print(f'-j{multiprocessing.cpu_count()}')")
+# Move to os.process_cpu_count() once Python 3.13 is the oldest.
+set -g -x MAKEFLAGS (python3 -c "import os; print(f'-j{os.cpu_count()}')")
 
 set -g -x CDPATH ~/Repositories
 
