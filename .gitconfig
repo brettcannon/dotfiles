@@ -1,40 +1,63 @@
+# https://jvns.ca/blog/2024/02/16/popular-git-config-options/
+[color "status"]
+    added = green bold
+    branch = yellow black bold ul
+    changed = yellow bold
+    deleted = red strike
+    untracked = cyan
+
 [core]
     excludesfile = .git_/gitignore
+
+[diff]
+    algorithm = histogram
+
+[fetch]
+    fsckobjects = true
 
 [init]
    defaultBranch = main
 
-[remote]
-    pushdefault = origin
-
-[push]
-    default = current
-
-[pull]
-    rebase = false
+[merge]
+    conflictstyle = zdiff3
 
 [gpg]
     program = gpg
 
-[color "status"]
-    added = green bold
-    changed = yellow bold
-    deleted = red strike
-    untracked = cyan
-    branch = yellow black bold ul
+[merge]
+    tool = code
+    autosquash = true
+    autostash = true
+
+[mergetool]
+    writeToTemp = true
+    keepBackup = false
+
+[mergetool "code"]
+    cmd = code --wait -m $REMOTE $LOCAL $BASE $MERGED
+
+[pull]
+    rebase = false
+
+[push]
+    default = current
+
+[receive]
+    fsckObjects = true
+
+[remote]
+    pushdefault = origin
+
+[rerere]
+    enabuled = true
+
+[transfer]
+    fsckobjects = true
 
 [user]
     name = "Brett Cannon"
     email = "brett@python.org"
     signkey = 966894F34B4EABA8
-
-[merge]
-	tool = code
-[mergetool]
-	writeToTemp = true
-	keepBackup = false
-[mergetool "code"]
-	cmd = code --wait -m $REMOTE $LOCAL $BASE $MERGED
 
 [includeIf "gitdir/i:microsoft/"]
     path = .git_/work.gitconfig
