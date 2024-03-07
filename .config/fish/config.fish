@@ -25,7 +25,6 @@ end
 
 if status is-interactive
   set -g -x CLICOLOR 1
-  set -g -x CDPATH ~/Repositories
 
   if command --search starship > /dev/null
     starship init fish | source
@@ -53,6 +52,17 @@ if status is-interactive
     set -g -x EDITOR "code --wait"
   else
     set -g -x EDITOR vim
+  end
+
+  if command --search zoxide > /dev/null
+    zoxide init fish | source
+    zoxide init --cmd cd fish | source
+    echo -n "cd → zoxide"
+    if command --search fzf > /dev/null
+        echo ""
+    else
+	echo " (w/o fzf)"
+    end
   end
 
   if string match -q "$TERM_PROGRAM" "vscode"
