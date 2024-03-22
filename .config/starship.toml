@@ -4,8 +4,13 @@ command_timeout = 750
 disabled = true
 
 [c]
+disabled = true
 commands = [["$CC", "--version"], ["clang", "--version"], ["gcc", "--version"]]
 format = 'via [$symbol($name( $version)) ]($style)'
+
+[character]
+success_symbol = "[➲](bold green)"
+error_symbol = "[➲](bold red)"
 
 [cmd_duration]
 disabled = true
@@ -18,4 +23,5 @@ disabled = true
 
 [python]
 python_binary = ["py"]
+detect_files = []
 detect_folders = [".venv"]
