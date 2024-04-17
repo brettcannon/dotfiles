@@ -30,7 +30,7 @@ symbol = "ⓔ "
 disabled = true
 
 [git_status]
-disabled = true
+disabled = false
 
 [nodejs]
 symbol = "[⬢](bold green) "
