@@ -65,15 +65,6 @@ if status is-interactive
     end
   end
 
-  if command --search atuin > /dev/null
-    atuin init fish | source
-    echo -n "✅"
-  else
-    echo -n "❌"
-  end
-  echo " Atuin"
-
-
   if string match -q "$TERM_PROGRAM" "vscode"
     if command --search code-insiders > /dev/null
       set -x CODE_ACTIVATION (code-insiders --locate-shell-integration-path fish)
