@@ -50,14 +50,12 @@ if status is-interactive
     set -g -x EDITOR vim
   end
 
-  if command --search zoxide > /dev/null
-    zoxide init fish | source
-    zoxide init --cmd cd fish | source
-    echo -n "cd → zoxide"
-    if command --search fzf > /dev/null
-        echo ""
+  if command --search autojump > /dev/null
+    if test -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
+        echo "autojump"
+        source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
     else
-	echo " (w/o fzf)"
+        echo "Activation script for autojump not found!"
     end
   end
 
