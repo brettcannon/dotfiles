@@ -1,5 +1,10 @@
 command_timeout = 750
 
+palette = "mine"
+
+[palettes.mine]
+limegreen = '#32CD32'
+
 [battery]
 disabled = true
 full_symbol = "• "
@@ -14,7 +19,7 @@ commands = [["$CC", "--version"], ["clang", "--version"], ["gcc", "--version"]]
 format = 'via [$symbol($name( $version)) ]($style)'
 
 [character]
-success_symbol = "[➲](bold green)"
+success_symbol = "[➲](limegreen)"
 error_symbol = "[➲](bold red)"
 
 [cmd_duration]
