@@ -18,10 +18,6 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
   /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 end
 
-if test -e ~/.cargo/bin
-   fish_add_path -g ~/.cargo/bin
-end
-
 
 if status is-interactive
   set -g -x CLICOLOR 1
