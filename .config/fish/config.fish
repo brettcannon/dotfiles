@@ -73,3 +73,10 @@ if status is-interactive
     end
   end
 end
+
+if command --search uv > /dev/null
+  uv generate-shell-completion fish | source
+end
+if command --search uvx > /dev/null
+  uvx --generate-shell-completion fish | source
+end
