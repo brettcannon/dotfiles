@@ -52,11 +52,13 @@ if status is-interactive
 
   if command --search autojump > /dev/null
     if test -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
-        echo "autojump"
+        echo "🗹 autojump "
         source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
     else
         echo "Activation script for autojump not found!"
     end
+  else
+    echo "❌ autojump"
   end
 
   if string match -q "$TERM_PROGRAM" "vscode"
