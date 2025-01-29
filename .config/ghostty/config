@@ -1,5 +1,7 @@
-font-size = 16
+font-size = 14
 font-family = MonoLisa
+font-feature = -calt
+font-feature = -liga
 font-feature = zero
 font-feature = ss04
 font-feature = ss06
@@ -8,7 +10,7 @@ font-feature = ss10
 font-feature = ss11
 font-feature = ss13
 
-window-width = 120
-window-height = 30
+window-width = 80
+window-height = 20
 
 window-inherit-working-directory = true
