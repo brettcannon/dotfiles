@@ -51,7 +51,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
    1. Make [fish the default login shell](https://fishshell.com/docs/current/#default-shell)
 1. Set up [NextDNS](https://my.nextdns.io/)
 1. Install apps
-   1. [1Password](https://1password.com/)
+   1. [1Password](https://1password.com/) (include setting up Git commit signing as appropriate)
    1. [Signal](https://signal.org/)
 1. Install fonts
    1. [MonoLisa](https://www.monolisa.dev/orders)
