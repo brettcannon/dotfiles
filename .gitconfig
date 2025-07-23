@@ -57,7 +57,6 @@
 [user]
     name = "Brett Cannon"
     email = "brett@python.org"
-    signkey = 966894F34B4EABA8
 
 [includeIf "gitdir/i:microsoft/"]
     path = .git_/work.gitconfig
