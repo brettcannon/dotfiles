@@ -20,7 +20,12 @@ format = 'via [$symbol($name( $version)) ]($style)'
 
 [character]
 success_symbol = "[➲](limegreen)"
-error_symbol = "[➲](bold red)"
+error_symbol = "[✗](bold red)"
+
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
 [cmd_duration]
 disabled = true
