@@ -56,6 +56,7 @@ Assumes that the [Python Launcher for Unix](https://github.com/brettcannon/pytho
 1. Install fonts
    1. [MonoLisa](https://www.monolisa.dev/orders)
    2. [Symbols](https://www.nerdfonts.com/font-downloads)
+1. Install [Python build](https://devguide.python.org/getting-started/setup-building/) dependencies
 
 > [!IMPORTANT]
 > When updating a distro in WSL and it requires a reboot, make sure to call `wsl --shutdown` to do a full shutdown.
