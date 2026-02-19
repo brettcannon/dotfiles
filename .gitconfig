@@ -1,4 +1,12 @@
 # https://jvns.ca/blog/2024/02/16/popular-git-config-options/
+# https://blog.gitbutler.com/how-git-core-devs-configure-git
+
+[branch]
+    sort = -committerdate
+
+[checkout]
+	workers = 0
+
 [color "status"]
     added = green bold
     branch = yellow black bold ul
@@ -6,14 +14,26 @@
     deleted = red strike
     untracked = cyan
 
+[column]
+    ui = auto
+
 [core]
     excludesfile = .git_/gitignore
 
 [diff]
     algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 
 [fetch]
     fsckobjects = true
+    prune = true
+    pruneTags = true
+    all = true
+
+[help]
+    autocorrect = prompt
 
 [init]
    defaultBranch = main
@@ -40,7 +60,14 @@
     rebase = false
 
 [push]
-    default = current
+    default = simple  # current
+    autoSetupRemote = true
+    followTags = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
 
 [receive]
     fsckObjects = true
@@ -50,6 +77,10 @@
 
 [rerere]
     enabuled = true
+    autoupdate = true
+
+[tag]
+    sort = version:refname
 
 [transfer]
     fsckobjects = true
@@ -62,7 +93,3 @@
     path = .git_/work.gitconfig
 [include]
     path = .git_/local.gitconfig
-
-
-[checkout]
-	workers = 0
