@@ -76,7 +76,7 @@
     pushdefault = origin
 
 [rerere]
-    enabuled = true
+    enabled = true
     autoupdate = true
 
 [tag]
