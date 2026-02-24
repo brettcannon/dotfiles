@@ -82,3 +82,7 @@ end
 if command --search uvx > /dev/null
   uvx --generate-shell-completion fish | source
 end
+if command --search fnm > /dev/null
+  fnm env --use-on-cd --shell fish | source
+  fnm completions --shell fish | source
+end
