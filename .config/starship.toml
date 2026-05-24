@@ -46,6 +46,9 @@ symbol = "[⬢](bold green) "
 [package]
 disabled = true
 
+[pijul_channel]
+disabled = true
+
 [pulumi]
 symbol = "🧊 "
 
