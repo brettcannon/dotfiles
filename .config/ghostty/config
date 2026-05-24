@@ -10,7 +10,4 @@ font-feature = ss10
 font-feature = ss11
 font-feature = ss13
 
-window-width = 80
-window-height = 20
-
 window-inherit-working-directory = true
