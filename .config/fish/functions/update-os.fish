@@ -30,7 +30,6 @@ function update-os --description "Update the OS"
     brew upgrade
 
     echo
-    echo "uv ..."
-    uv self update
-    uv tool upgrade --all
+    echo "pipx ..."
+    pipx upgrade-all
 end
