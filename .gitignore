@@ -1,5 +1,17 @@
 .git_/local.gitconfig
+
+.claude/.*
+.claude/backups/
+.claude/cache/
+.claude/projects/
+.claude/history.jsonl
+.claude/mcp-needs-auth-cache.json
+
 .config/fish/fish_variables
 .config/fish/conf.d
 .config/fish/completions/
+
+.config/ghostty/*.bak
+.config/ghostty/config.backup.*
+
 .config/kitty/*.bak
