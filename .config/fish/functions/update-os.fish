@@ -27,7 +27,7 @@ function update-os --description "Update the OS"
     echo
     echo "Homebrew ..."
     brew update
-    brew upgrade
+    brew upgrade -y
 
     echo
     echo "pipx ..."
