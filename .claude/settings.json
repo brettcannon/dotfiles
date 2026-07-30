@@ -3,5 +3,6 @@
     "commit": "",
     "pr": ""
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "tui": "fullscreen"
 }
