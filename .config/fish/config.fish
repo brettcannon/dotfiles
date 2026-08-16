@@ -42,12 +42,16 @@ if status is-interactive
     echo "ls → lsd"
   end
 
-  if command --search code-insiders > /dev/null
-    set -g -x EDITOR "code-insiders --wait"
-  else if command --search code > /dev/null
-    set -g -x EDITOR "code --wait"
+  if test "$TERM_PROGRAM" = "vscode"
+    if command --search code-insiders > /dev/null
+      set -g -x EDITOR "code-insiders --wait"
+    else
+      set -g -x EDITOR "code --wait"
+    end
+  else if command --search nvim >> /dev/null
+    set -g -x EDITOR nvim
   else
-    set -g -x EDITOR vim
+    set -g -x EIDTOR vim
   end
 
   if command --search autojump > /dev/null
