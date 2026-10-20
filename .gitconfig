@@ -19,6 +19,7 @@
 
 [core]
     excludesfile = .git_/gitignore
+    hooksPath = /dev/null
 
 [diff]
     algorithm = histogram
@@ -59,7 +60,7 @@
     rebase = false
 
 [push]
-    default = simple  # current
+    default = current
     autoSetupRemote = true
     followTags = true
 
