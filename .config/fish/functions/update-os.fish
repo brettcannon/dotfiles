@@ -2,7 +2,7 @@ function update-os --description "Update the OS"
     echo "Linux distro ..."
     if test -e /etc/os-release
         if grep --quiet leap /etc/os-release
-            echo "No support for OpenSUSE LEAP"
+            echo "⚠️ No support for OpenSUSE LEAP"
             return 1
         else if grep --quiet tumbleweed /etc/os-release
             # Python dependencies: zypper info -t pattern devel_basis
@@ -16,11 +16,11 @@ function update-os --description "Update the OS"
             # dnf builddep python3
 	    sudo dnf upgrade -y --refresh
         else
-            echo "Unsupported Linux distro"
+            echo "⚠️ Unsupported Linux distro"
             return 1
         end
     else
-        echo "/etc/os-release not found"
+        echo "⚠️ /etc/os-release not found"
         return 1
     end
 
@@ -45,7 +45,10 @@ end
 
 function __update_os_completion --argument-names tool
     set -e argv[1]
-    command --search $tool > /dev/null; or return 0
+    if not command --search $tool > /dev/null
+        echo "⏭️ $tool"
+        return 0
+    end
 
     set -l completions_dir "$__fish_config_dir/completions"
     mkdir -p "$completions_dir"; or return
@@ -54,11 +57,11 @@ function __update_os_completion --argument-names tool
     $argv > "$completion_file"
     if test $status -ne 0
         rm "$completion_file"
-        echo "Unable to generate $tool completions" >&2
+        echo "⚠️ Unable to generate $tool completions" >&2
         return 1
     end
 
     mv "$completion_file" "$completions_dir/$tool.fish"; or return
-    echo " $tool"
+    echo "🗹 $tool"
 
 end

@@ -59,10 +59,10 @@ if status is-interactive
         echo "🗹 autojump "
         source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
     else
-        echo "Activation script for autojump not found!"
+        echo "⚠️ Activation script for autojump not found!"
     end
   else
-    echo "❌ autojump"
+    echo "⏭️ autojump"
   end
 
   if string match -q "$TERM_PROGRAM" "vscode"
@@ -75,7 +75,7 @@ if status is-interactive
     if set -q CODE_ACTIVATION
       source $CODE_ACTIVATION
     else
-      echo "Unable to find VS Code shell integration."
+      echo "⚠️ Unable to find VS Code shell integration."
     end
   end
 end
