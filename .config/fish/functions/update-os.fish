@@ -33,4 +33,32 @@ function update-os --description "Update the OS"
     echo "uv ..."
     uv self update
     uv tool upgrade --all
+
+    echo
+    echo "Fish completions ..."
+    __update_os_completion uv uv generate-shell-completion fish; or return
+    __update_os_completion uvx uvx --generate-shell-completion fish; or return
+    __update_os_completion fnm fnm completions --shell fish; or return
+    __update_os_completion pipx register-python-argcomplete --shell fish pipx; or return
+    __update_os_completion copilot copilot completion fish
+end
+
+function __update_os_completion --argument-names tool
+    set -e argv[1]
+    command --search $tool > /dev/null; or return 0
+
+    set -l completions_dir "$__fish_config_dir/completions"
+    mkdir -p "$completions_dir"; or return
+    set -l completion_file (mktemp "$completions_dir/$tool.fish.XXXXXX"); or return
+
+    $argv > "$completion_file"
+    if test $status -ne 0
+        rm "$completion_file"
+        echo "Unable to generate $tool completions" >&2
+        return 1
+    end
+
+    mv "$completion_file" "$completions_dir/$tool.fish"; or return
+    echo " $tool"
+
 end

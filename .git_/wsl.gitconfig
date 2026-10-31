@@ -1,2 +1,4 @@
-[credential]
-    helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe
+[credential "https://github.com"]
+    # Clear inherited helpers so only gh handles credentials for this host.
+    helper =
+    helper = !gh auth git-credential
