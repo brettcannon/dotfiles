@@ -19,6 +19,7 @@
 
 [core]
     excludesfile = .git_/gitignore
+	hooksPath = /dev/null
 
 [diff]
     algorithm = histogram
