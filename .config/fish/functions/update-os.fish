@@ -50,6 +50,14 @@ function __update_os_completion --argument-names tool
         return 0
     end
 
+    if test "$tool" = copilot
+        set -l executable (path resolve (command --search copilot))
+        if string match --quiet '*/copilot-shim/copilot' -- "$executable"
+            echo "⏭️ copilot (VS Code shim)"
+            return 0
+        end
+    end
+
     set -l completions_dir "$__fish_config_dir/completions"
     mkdir -p "$completions_dir"; or return
     set -l completion_file (mktemp "$completions_dir/$tool.fish.XXXXXX"); or return
